@@ -9,7 +9,6 @@ import java.util.Observable;
 import java.util.Observer;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Semaphore;
-
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
@@ -46,7 +45,6 @@ public class URLFetcher extends Application {
 	Button stop;
 	Button concurrent;
 	Button launcher;
-	MyCounter counter;
 	MyLabel3 time;
 	MyLabel completed;
 	MyLabel2 running;
@@ -57,7 +55,6 @@ public class URLFetcher extends Application {
 		workers = new ArrayList<WebWorker>();
 		readData(path);
 		numOfURL = data.size();
-		counter = new MyCounter();
 
 		single = new Button("Single Thread Fetch");
 		single.setOnAction(new EventHandler<ActionEvent>() {
